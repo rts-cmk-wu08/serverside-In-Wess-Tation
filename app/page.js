@@ -1,65 +1,40 @@
-import Link from "next/link";
+import Cards from "./components/landingPage/Cards";
+import Hero from "./components/landingPage/Hero";
+import Video from "./components/landingPage/Video";
 
-export default function Home() {
+
+const getData = async () => {
+  const result = await fetch("https://swanky-api.onrender.com/offers")
+  if( !result.ok ) { throw new Error("Failed to fetch data");}
+  return result.json()
+}
+
+const Home = async () => {
+
+  const data = await getData();
+
   return (
-    <>
-    <main className="">
-      <h1>Here is the landing page</h1>
-
-      <img className="w-screen" src="" alt="hero image" />
+    <main>
+      <Hero/>
 
       <section>
-        <h1></h1>
-        <div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
-        
-        <article className="flex gap-2 justify-center">
-          <div>
-            <img src="" alt="red dress" />
-            <p></p>
-            <p></p>
-          </div>
-          <div>
-            <img src="" alt="leather jacket" />
-            <p></p>
-            <p></p>
-          </div>
-          <div>
-            <img src="" alt="orange outfit" />
-            <p></p>
-            <p></p>
-          </div>
-          <div>
-            <img src="" alt="male model" />
-            <p></p>
-            <p></p>
+        <article className="text-center pt-[10rem]">
+          <h1 className="text-2xl">Our Products </h1>
+          <div className="flex justify-center gap-5">
+            <p>Trending Now</p>
+            <p>New Arrivals</p>
+            <p>Best Sellers</p>
           </div>
         </article>
+
+        <Cards />
+
       </section>
 
-      <section className="flex">
-        <div>
-          <img src="" alt="video" />
-          <h1></h1>
-          <p></p>
-        </div>
-       
-        <div>
-          <h3></h3>
-          <p></p>
-          <h3></h3>
-          <p></p>
-          <h3></h3>
-          <p></p>
-        </div>
-       
-      </section>
+        <Video />
 
     </main>
-    </>
   )
 }
+
+export default Home;
