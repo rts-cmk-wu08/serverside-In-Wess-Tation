@@ -1,3 +1,4 @@
+"use client";
 
 const getData = async () => {
     const result = await fetch("https://swanky-api.onrender.com/started")

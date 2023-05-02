@@ -12,8 +12,15 @@ const BlogDetail = async ({params: { blogId }}) => {
 
     return ( 
         <main>
-            <h1>Here is Detailed page for blog</h1>
-
+            <div className="w-[100%] bg-slate-200 h-[10rem] text-center pt-10">
+                <p className="text-[3rem]">Blog Detail</p>
+            </div>
+            <section className="max-w-[60rem] mx-auto py-[5rem]">
+                <h1 className="text-[2rem] p-2 font-bold">{blog.title}</h1>
+                <div className="h-[30rem] w-[100%] bg-slate-600 "></div>
+                <h2 className="font-bold py-5">{blog.subtitle}</h2>
+                <p className="">{blog.text}</p>
+            </section>
         </main>
      );
 }

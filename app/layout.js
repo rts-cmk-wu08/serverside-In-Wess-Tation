@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
               <li><Link href={`/contact`}>Contact</Link></li>
               <li><Link href={`/`} className="font-bold uppercase">Swanky</Link></li>
               <li><Link href={`/contact`}>Contact</Link></li>
-              <li><Link href={`/Blog`}>Blog</Link></li>
+              <li><Link href={`/blog`}>Blog</Link></li>
               <li><Link href={`/`}>Home</Link></li>
 
             </ul>

@@ -1,9 +1,8 @@
-
-
 import Link from "next/link";
 
+
 const getData = async () => {
-    const result = await fetch("https://swanky-api.onrender.com/posts")
+    const result = await fetch("https://swanky-api.onrender.com/posts", { next: { revalidate: 30 } })
     if( !result.ok ) { throw new Error("Failed to fetch data");}
     return result.json()
   }
