@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <header>
           <nav>
-            <ul className="flex justify-around p-5 border-b-2">
+            <ul className="flex justify-around p-5 border-b-2 uppercase">
               <li><Link href={`/`}>Home</Link></li>
               <li><Link href={`/blog`}>Blog</Link></li>
               <li><Link href={`/contact`}>Contact</Link></li>
