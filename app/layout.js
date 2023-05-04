@@ -23,18 +23,39 @@ export default function RootLayout({ children }) {
               <li><Link href={`/contact`}>Contact</Link></li>
               <li><Link href={`/blog`}>Blog</Link></li>
               <li><Link href={`/`}>Home</Link></li>
-
             </ul>
           </nav>
         </header>
         {children}
-      <footer className='border-t-2'>
-        <h1>Here is footer</h1>
-        <section>
-          <h1>Swanky</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae error harum, quis officiis consequuntur beatae fugiat rerum libero quia cum?</p>
-          <p className='text-grey border-b-2'>Enter Your Email Adress...</p>
-        </section>
+      <footer className='border-t-2 flex justify-around leading-8 py-[5rem]'>
+        <div>
+          <h1 className='font-bold uppercase text-2xl'>Swanky</h1>
+          <p className='w-[20rem] text-slate-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae error harum, quis officiis consequuntur beatae fugiat rerum libero quia cum?</p>
+          <p className='text-slate-300 border-b-2'>Enter Your Email Adress...</p>
+        </div>
+        <div className='font-bold'>
+          <h1 className='text-2xl '>Quick Links</h1>
+          <p className='uppercase'>Home</p>
+          <p className='uppercase'>About</p>
+          <p className='uppercase'>Shop</p>
+          <p className='uppercase'>Blogs</p>
+          <p className='uppercase'>Contact</p>
+        </div>
+        <div className='font-bold'>
+          <h1 className='text-2xl '>Help & Info</h1>
+          <p className='uppercase'>Track your order</p>
+          <p className='uppercase'>Returns policies</p>
+          <p className='uppercase'>Shipping + delivery</p>
+          <p className='uppercase'>Contact us</p>
+          <p className='uppercase'>Faqs</p>
+        </div>
+        <div>
+          <h1 className='text-2xl font-bold'>Contact Us</h1>
+          <p className='text-slate-400'>Do you have any queries or suggestions?</p>
+          <p className='font-bold underline'>youinfo@gmail.com</p>
+          <p className='text-slate-400'>If you need support? Just give us a call.</p>
+          <p className='font-bold underline'>+55 111 222 333 44</p>
+        </div>
       </footer>
       </body>
     </html>
