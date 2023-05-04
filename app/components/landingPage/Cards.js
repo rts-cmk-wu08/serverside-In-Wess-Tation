@@ -17,7 +17,7 @@ const Cards = async () => {
             {cards.map(card => (
                 <article className="text-center">
                     <div className="w-[15rem] h-[20rem] bg-slate-200"></div>
-                    <h3>{card.name}</h3>
+                    <h3 className="font-bold hover:underline">{card.name}</h3>
                     <p className="text-orange-600">${card.price}.00</p>
                 </article>
             ))}

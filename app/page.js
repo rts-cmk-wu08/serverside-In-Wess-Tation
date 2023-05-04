@@ -21,9 +21,9 @@ const Home = async () => {
         <article className="text-center pt-[10rem]">
           <h1 className="text-5xl font-bold">Our Products </h1>
           <div className="flex justify-center gap-5 py-5 text-2xl">
-            <p className="hover:underline">Trending Now</p>
-            <p className="hover:underline">New Arrivals</p>
-            <p className="hover:underline">Best Sellers</p>
+            <p className="hover:text-black text-slate-400 font-bold hover:underline">Trending Now</p>
+            <p className="hover:text-black text-slate-400 font-bold hover:underline">New Arrivals</p>
+            <p className="hover:text-black text-slate-400 font-bold hover:underline">Best Sellers</p>
           </div>
         </article>
 
