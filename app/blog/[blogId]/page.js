@@ -1,6 +1,6 @@
 
 const getData = async (blogId) => {
-    const result = await fetch(`https://swanky-api.onrender.com/posts/${blogId}`)
+    const result = await fetch(`https://swanky-api.onrender.com/posts/${blogId}`, {next: { revalidate: 0 }})
     if(!result.ok) { throw new Error("Failed to fetch album")}
     return result.json()
 }
