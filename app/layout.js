@@ -16,13 +16,13 @@ export default function RootLayout({ children }) {
       <header>
           <nav>
             <ul className="flex justify-around p-5 border-b-2 uppercase">
-              <li><Link href={`/`}>Home</Link></li>
-              <li><Link href={`/blog`}>Blog</Link></li>
-              <li><Link href={`/contact`}>Contact</Link></li>
-              <li><Link href={`/`} className="font-bold uppercase">Swanky</Link></li>
-              <li><Link href={`/contact`}>Contact</Link></li>
-              <li><Link href={`/blog`}>Blog</Link></li>
-              <li><Link href={`/`}>Home</Link></li>
+              <li><Link className='hover:underline' href={`/`}>Home</Link></li>
+              <li><Link className='hover:underline' href={`/blog`}>Blog</Link></li>
+              <li><Link className='hover:underline' href={`/contact`}>Contact</Link></li>
+              <li><Link className='font-bold uppercase' href={`/`}>Swanky</Link></li>
+              <li><Link className='hover:underline' href={`/contact`}>Contact</Link></li>
+              <li><Link className='hover:underline' href={`/blog`}>Blog</Link></li>
+              <li><Link className='hover:underline' href={`/`}>Home</Link></li>
             </ul>
           </nav>
         </header>
@@ -35,19 +35,19 @@ export default function RootLayout({ children }) {
         </div>
         <div className='font-bold'>
           <h1 className='text-2xl '>Quick Links</h1>
-          <p className='uppercase'>Home</p>
-          <p className='uppercase'>About</p>
-          <p className='uppercase'>Shop</p>
-          <p className='uppercase'>Blogs</p>
-          <p className='uppercase'>Contact</p>
+          <p className='uppercase hover:underline'>Home</p>
+          <p className='uppercase hover:underline'>About</p>
+          <p className='uppercase hover:underline'>Shop</p>
+          <p className='uppercase hover:underline'>Blogs</p>
+          <p className='uppercase hover:underline'>Contact</p>
         </div>
         <div className='font-bold'>
           <h1 className='text-2xl '>Help & Info</h1>
-          <p className='uppercase'>Track your order</p>
-          <p className='uppercase'>Returns policies</p>
-          <p className='uppercase'>Shipping + delivery</p>
-          <p className='uppercase'>Contact us</p>
-          <p className='uppercase'>Faqs</p>
+          <p className='uppercase hover:underline'>Track your order</p>
+          <p className='uppercase hover:underline'>Returns policies</p>
+          <p className='uppercase hover:underline'>Shipping + delivery</p>
+          <p className='uppercase hover:underline'>Contact us</p>
+          <p className='uppercase hover:underline'>Faqs</p>
         </div>
         <div>
           <h1 className='text-2xl font-bold'>Contact Us</h1>

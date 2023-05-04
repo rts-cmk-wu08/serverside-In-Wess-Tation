@@ -23,29 +23,32 @@ const Contact = () => {
 
     return ( 
         <>
-        <main className="">
+        <main>
           <div className="w-[100%] bg-slate-500 h-[10rem] text-center pt-10">
             <p className="text-[3rem] text-white">Contact</p>
           </div>
 
+        <section className="w-screen px-[6rem]">
           <section className="flex justify-center gap-10 py-[10rem]">
             <article>
-              <h1>contact info</h1>
-              <p className="w-[30rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptatibus quis animi modi culpa fugiat quaerat itaque provident odit eaque!</p>
-              <div>
-                <h2>Office</h2>
+              <h1 className="font-bold text-4xl">contact info</h1>
+              <p className="text-slate-400 py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <article className="flex gap-5 text-slate-400 leading-7">
+                 <div>
+                <h2 className="text-black font-bold text-xl">Office</h2>
                 <p>730 Glenstone Ave 65802, Springfireld, US</p>
                 <p>+123 222 333 44</p>
                 <p>+123 666 777 88</p>
                 <p>Swanky@yourinfo.com</p>
               </div>
               <div>
-                <h2>Management</h2>
+                <h2 className="text-black font-bold text-xl">Management</h2>
                 <p>730 Glenstone Ave 65802, Springfireld, US</p>
                 <p>+123 222 333 44</p>
                 <p>+123 666 777 88</p>
                 <p>Swanky@yourinfo.com</p>
               </div>
+              </article>
             </article>
             <Formik 
             initialValues={{
@@ -59,60 +62,63 @@ const Contact = () => {
               resetForm();
           }}
             >
-            <Form className="flex flex-col">
-              <h1>Any Questions?</h1>
-              <p>Use the form below to get in touch with us.</p>
-              <article className="flex">
-                <div className="formgroup">
-                    <Field className="border-b-2" type="text" name="name" id="name" placeholder="Name"/>
+            <Form className="flex flex-col leading-10">
+              <h1 className="font-bold text-4xl">Any Questions?</h1>
+              <p className="pb-5 pt-2">Use the form below to get in touch with us.</p>
+              <article className="flex gap-5">
+                <div>
+                    <Field className="border-b-2 border-black" type="text" name="name" id="name" placeholder="Name"/>
                     <ErrorMessage name="name" />
                 </div>
-                <div className="formgroupe">
-                    <Field className="border-b-2" type="email" name="email" id="email" placeholder="Write Your Email Here *"/>
+                <div>
+                    <Field className="border-b-2 border-black" type="email" name="email" id="email" placeholder="Write Your Email Here *"/>
                     <ErrorMessage name="email" />
                 </div>
               </article>
-              <div className="formgroup">
-                        <Field className="border-b-2" type="text" name="number" id="number" placeholder="Phone Number"/>
+              <div>
+                        <Field className="border-b-2 border-black w-[29rem]" type="text" name="number" id="number" placeholder="Phone Number"/>
                         <ErrorMessage name="number" />
                     </div>
-                    <div className="formgroupe">
-                        <Field className="border-b-2" type="text" name="subject" id="subject" placeholder="Write Your Subject Here"/>
+                    <div>
+                        <Field className="border-b-2 border-black w-[29rem]" type="text" name="subject" id="subject" placeholder="Write Your Subject Here"/>
                         <ErrorMessage name="subject" />
                     </div>
-                    <div className="formgroupe">
-                        <Field className="border-b-2" type="text" name="message" id="message" placeholder="Write Your Message Here *"/>
+                    <div>
+                        <Field className="border-b-2 border-black w-[29rem]" type="text" name="message" id="message" placeholder="Write Your Message Here *"/>
                         <ErrorMessage name="message" />
                     </div>
 
-              <button type="submit">Submit</button>
+              <button className="bg-black text-white w-[7rem] mt-5 text-sm py-1" type="submit">Submit</button>
             </Form>
             </Formik>
           </section>
     
-          <section className="flex justify-center gap-10 pb-[10rem]">
-            <div className="w-[20rem] h-[20rem] bg-slate-400"></div>
-            <article>
-              <h1>Our Stores</h1>
-              <p>You an also directly buy products from our stores.</p>
-              <div>
-                <h2>USA</h2>
+          <section className="flex justify-center gap-10 pb-[10rem] leading-7">
+            <div className="w-[35rem] h-[30rem] bg-slate-400"></div>
+            <article className="flex flex-col justify-center">
+              <h1 className="font-bold text-4xl">Our Stores</h1>
+              <p className="text-slate-400 py-3">You an also directly buy products from our stores.</p>
+              <article className="flex gap-5 pt-5">
+                <div className="text-slate-400">
+                <h2 className="underline font-bold text-xl text-black">USA</h2>
                 <p>730 Glenstone Ave 65802, Springfireld, US</p>
                 <p>+123 222 333 44</p>
                 <p>+123 666 777 88</p>
                 <p>Swanky@yourinfo.com</p>
               </div>
-              <div>
-                <h2>France</h2>
+              <div className="text-slate-400">
+                <h2 className="underline font-bold text-xl text-black">France</h2>
                 <p>730 Glenstone Ave 65802, Springfireld, US</p>
                 <p>+123 222 333 44</p>
                 <p>+123 666 777 88</p>
                 <p>Swanky@yourinfo.com</p>
               </div>
+              </article>
+              
             </article>
           </section>
     
-    
+          </section>
     
         </main>
         </>

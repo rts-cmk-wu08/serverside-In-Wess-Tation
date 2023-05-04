@@ -19,11 +19,11 @@ const Home = async () => {
 
       <section>
         <article className="text-center pt-[10rem]">
-          <h1 className="text-2xl">Our Products </h1>
-          <div className="flex justify-center gap-5">
-            <p>Trending Now</p>
-            <p>New Arrivals</p>
-            <p>Best Sellers</p>
+          <h1 className="text-5xl font-bold">Our Products </h1>
+          <div className="flex justify-center gap-5 py-5 text-2xl">
+            <p className="hover:underline">Trending Now</p>
+            <p className="hover:underline">New Arrivals</p>
+            <p className="hover:underline">Best Sellers</p>
           </div>
         </article>
 
