@@ -1,13 +1,26 @@
 "use client";
 
+import { Formik, Field, Form, ErrorMessage } from "formik";
 
-const getData = async () => {
-  const result = await fetch("https://swanky-api.onrender.com/")
-  if( !result.ok ) { throw new Error("Failed to fetch data");}
-  return result.json()
-}
 
 const Contact = () => {
+
+  const validate = (values) => {
+    const errors = {} 
+
+    if (!values.name) {
+        errors.name = "Required!"
+    }else if (values.name.length > 15) {
+        errors.name = "Name is too long!"
+    }
+
+    if (!values.email) {
+        errors.email = "Reduired!"
+    }
+
+    return errors;
+}
+
     return ( 
         <>
         <main className="">
@@ -34,18 +47,47 @@ const Contact = () => {
                 <p>Swanky@yourinfo.com</p>
               </div>
             </article>
-            <article className="flex flex-col">
+            <Formik 
+            initialValues={{
+              name: "",
+              email: "",
+          }}
+          validate={validate}
+          onSubmit={(values, {resetForm}) => {
+              //your axios post could be here... 
+              console.log(values)
+              resetForm();
+          }}
+            >
+            <Form className="flex flex-col">
               <h1>Any Questions?</h1>
               <p>Use the form below to get in touch with us.</p>
-              <div className="flex">
-                <input type="text" placeholder="Name"/>
-                <input type="text" placeholder="White Your Email Here *"/>
-              </div>
-              <input type="text" placeholder="Phone Number"/>
-              <input type="text" placeholder="Write Your Subject Here"/>
-              <input type="text" placeholder="Write Your Message Here *"/>
+              <article className="flex">
+                <div className="formgroup">
+                    <Field className="border-b-2" type="text" name="name" id="name" placeholder="Name"/>
+                    <ErrorMessage name="name" />
+                </div>
+                <div className="formgroupe">
+                    <Field className="border-b-2" type="email" name="email" id="email" placeholder="Write Your Email Here *"/>
+                    <ErrorMessage name="email" />
+                </div>
+              </article>
+              <div className="formgroup">
+                        <Field className="border-b-2" type="text" name="number" id="number" placeholder="Phone Number"/>
+                        <ErrorMessage name="number" />
+                    </div>
+                    <div className="formgroupe">
+                        <Field className="border-b-2" type="text" name="subject" id="subject" placeholder="Write Your Subject Here"/>
+                        <ErrorMessage name="subject" />
+                    </div>
+                    <div className="formgroupe">
+                        <Field className="border-b-2" type="text" name="message" id="message" placeholder="Write Your Message Here *"/>
+                        <ErrorMessage name="message" />
+                    </div>
+
               <button type="submit">Submit</button>
-            </article>
+            </Form>
+            </Formik>
           </section>
     
           <section className="flex justify-center gap-10 pb-[10rem]">

@@ -13,7 +13,9 @@ const Blog = async () => {
 
     return ( 
       <>
-        <div className="w-[100%] bg-slate-900 h-[10rem]"></div>
+        <div className="w-[100%] bg-slate-900 h-[10rem]">
+          <p className="text-[3rem] text-white text-center pt-10">Blog</p>
+        </div>
         <section className="grid grid-cols-3 place-content-center p-20">
 
             {posts.map(post => (
